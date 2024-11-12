@@ -2,16 +2,7 @@
 
 import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/section-header";
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 
 const projects = [
@@ -33,6 +24,24 @@ const projects = [
     image: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80",
     tags: ["Next.js", "Framer Motion", "Tailwind CSS"],
   },
+  {
+    title: "Sophie Bluel Architecte",
+    description: "Création d'une page web dynamique pour le site internet d'une architecte d'intérieur .",
+    image: "/assets/projets/sophiebluel.webp",
+    tags: ["HTML | CSS | JS, API"],
+  },
+  {
+    title: "Kasa",
+    description: "Implémentation du front-end d une application de logement .",
+    image: "/assets/projets/Kasa.webp",
+    tags: ["SEO | Performance | Accessibilité | Responsive"],
+  },
+  {
+    title: "Argent Bank",
+    description: "Développement front-end d'une application bancaire .",
+    image: "/assets/projets/argentbank.webp",
+    tags: ["REACT REDUX | TYPESCRIPT"],
+  }
 ];
 
 export default function Portfolio() {
@@ -43,43 +52,44 @@ export default function Portfolio() {
         description="Découvrez mes dernières réalisations et projets"
       />
 
-      <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-16 columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
         {projects.map((project, index) => (
           <motion.div
             key={project.title}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
+            className="break-inside-avoid"
           >
-            <Card className="overflow-hidden">
-              <div className="relative h-48 w-full">
+            <div className="group relative overflow-hidden rounded-xl bg-white dark:bg-gray-800 shadow-lg">
+              <div className="relative aspect-video overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
                 />
+                <div className="absolute top-4 right-4 flex gap-2">
+                  
+                </div>
               </div>
-              <CardHeader>
-                <CardTitle className="flex items-center justify-between">
-                  {project.title}
-                  <Button variant="ghost" size="icon">
-                    <ExternalLink className="h-4 w-4" />
-                  </Button>
-                </CardTitle>
-                <CardDescription>{project.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag) => (
-                    <Badge key={tag} variant="secondary">
+                    <Badge 
+                      key={tag} 
+                      variant="secondary"
+                      className="bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+                    >
                       {tag}
                     </Badge>
                   ))}
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </motion.div>
         ))}
       </div>
