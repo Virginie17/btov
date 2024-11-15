@@ -30,7 +30,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
       <article className="container mx-auto px-4 py-16">
         <div className="max-w-3xl mx-auto">
           <Link 
-            href="/blog" 
+            href="/blog/" 
             className="inline-flex items-center gap-2 mb-8 text-muted-foreground hover:text-foreground transition-colors"
           >
             <ArrowLeft className="h-4 w-4" />

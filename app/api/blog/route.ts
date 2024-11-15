@@ -7,22 +7,34 @@ const blogPostsDB = new Map<string, BlogPost>();
 // Initialiser quelques articles
 const initialPosts: BlogPost[] = [
   {
-    slug: "tendances-developpement-web-2024",
-    title: "Les Tendances du Développement Web en 2024",
-    date: "2024-03-15",
-    coverImage: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80",
-    excerpt: "Découvrez les technologies et pratiques qui façonnent le développement web en 2024.",
-    tags: ["Tendances", "Web", "2024"],
-    content: `# Les Tendances du Développement Web en 2024\n\nLe développement web évolue constamment...`
+    slug: "impact-ia-developpement-web",
+    title: "L'Impact de l'IA dans le Développement Web Moderne",
+    description: "Découvrez comment l'intelligence artificielle révolutionne le développement web avec les outils de génération de code, l'assistance au développement et l'optimisation automatique.",
+    date: "2024-01-15",
+    category: "Tendances",
+    readTime: "5 min",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995",
+    content: "Contenu détaillé de l'article sur l'IA..."
   },
   {
-    slug: "optimisation-performance-web",
-    title: "Guide Complet sur l'Optimisation des Performances Web",
-    date: "2024-03-10",
-    coverImage: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80",
-    excerpt: "Apprenez les meilleures pratiques pour optimiser les performances de votre site web.",
-    tags: ["Performance", "Optimisation", "Web Vitals"],
-    content: `# Guide Complet sur l'Optimisation des Performances Web\n\nLa performance est un facteur clé...`
+    slug: "nextjs-14-nouveautes",
+    title: "Next.js 14 : Les Nouvelles Fonctionnalités à Connaître",
+    description: "Exploration des dernières fonctionnalités de Next.js 14 : Server Actions, Partial Prerendering et améliorations des performances.",
+    date: "2024-01-10",
+    category: "Framework",
+    readTime: "4 min",
+    image: "https://images.unsplash.com/photo-1618477247222-acbdb0e159b3",
+    content: "Contenu détaillé sur Next.js 14..."
+  },
+  {
+    slug: "web3-avenir-developpement",
+    title: "Le Web3 et l'Avenir du Développement",
+    description: "Comment la blockchain et les technologies décentralisées transforment l'approche du développement web moderne.",
+    date: "2024-01-05",
+    category: "Innovation",
+    readTime: "6 min",
+    image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0",
+    content: "Contenu détaillé sur le Web3..."
   }
 ];
 

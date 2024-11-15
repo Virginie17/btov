@@ -5,7 +5,7 @@ export default function PolitiqueConfidentialite() {
       
       <div className="prose prose-lg max-w-none">
         <h2>1. Collecte des informations</h2>
-        <p>Nous collectons les informations que vous nous fournissez lors de l'utilisation de notre site.</p>
+        <p>Nous collectons les informations que vous nous fournissez lors de l utilisation de notre site.</p>
 
         <h2>2. Utilisation des informations</h2>
         <p>Les informations que nous collectons sont utilisées pour :</p>

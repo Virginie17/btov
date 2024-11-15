@@ -1,14 +1,16 @@
 export interface BlogPost {
   slug: string;
   title: string;
+  description: string;
   date: string;
-  coverImage: string;
-  excerpt: string;
-  tags: string[];
+  category: string;
+  readTime: string;
+  image: string;
   content: string;
 }
 
-export const blogPosts = [
+
+export const blogPosts: BlogPost[] = [
   {
     slug: "impact-ia-developpement-web",
     title: "L'Impact de l'IA dans le Développement Web Moderne",

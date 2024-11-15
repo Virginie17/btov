@@ -29,18 +29,18 @@ export default function MentionsLegales() {
           </p>
           <p>
             Directeur de la publication : Mme Chaffard <br />
-            Hébergeur : [Nom et coordonnées de l'hébergeur]
+            Hébergeur : [Nom et coordonnées de l hébergeur]
           </p>
         </section>
 
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4">2. Propriété intellectuelle</h2>
           <p>
-            L'ensemble du contenu de ce site (structure, textes, images, logos, base de données...) 
+            L ensemble du contenu de ce site (structure, textes, images, logos, base de données...) 
             est la propriété exclusive de B to V Développement ou de ses partenaires. Toute reproduction, 
             représentation, modification, publication, transmission, dénaturation, totale ou partielle 
             du site ou de son contenu, par quelque procédé que ce soit, et sur quelque support que 
-            ce soit est interdite sans l'autorisation écrite préalable de B to V Développement.
+            ce soit est interdite sans l autorisation écrite préalable de B to V Développement.
           </p>
         </section>
 
@@ -48,9 +48,9 @@ export default function MentionsLegales() {
           <h2 className="text-2xl font-bold mb-4">3. Protection des données personnelles</h2>
           <p>
             Conformément à la loi Informatique et Libertés du 6 janvier 1978 modifiée, et au 
-            Règlement Général sur la Protection des Données (RGPD), vous disposez d'un droit 
-            d'accès, de rectification, de suppression et d'opposition aux données personnelles 
-            vous concernant. Pour exercer ces droits, vous pouvez nous contacter à l'adresse 
+            Règlement Général sur la Protection des Données (RGPD), vous disposez d un droit 
+            d accès, de rectification, de suppression et d opposition aux données personnelles 
+            vous concernant. Pour exercer ces droits, vous pouvez nous contacter à l adresse 
             suivante : contact@btov-dev.fr
           </p>
         </section>
@@ -58,8 +58,8 @@ export default function MentionsLegales() {
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4">4. Cookies</h2>
           <p>
-            Le site utilise des cookies pour améliorer l'expérience utilisateur. En naviguant 
-            sur ce site, vous acceptez l'utilisation de cookies conformément à notre politique 
+            Le site utilise des cookies pour améliorer l expérience utilisateur. En naviguant 
+            sur ce site, vous acceptez l utilisation de cookies conformément à notre politique 
             de confidentialité.
           </p>
         </section>

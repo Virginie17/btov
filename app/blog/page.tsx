@@ -26,8 +26,8 @@ export default function Blog() {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
           >
-            <Link href={`/blog/${post.slug}`}>
-              <Card className="overflow-hidden h-full hover:shadow-lg transition-shadow duration-300">
+            <Link href={`/blog/${post.slug}`} className="block h-full">
+              <Card className="overflow-hidden h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
                 <div className="relative h-48 w-full">
                   <Image
                     src={post.image}

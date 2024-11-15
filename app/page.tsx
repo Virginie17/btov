@@ -74,7 +74,7 @@ export default function Home() {
       <section className="relative min-h-[90vh] overflow-hidden bg-gradient-to-b from-primary/10 via-background to-background">
         <div className="absolute inset-0 bg-grid-white/10" />
         <div className="container relative mx-auto flex min-h-[90vh] px-4">
-          <div className="flex flex-col items-center justify-center text-center lg:items-start lg:text-left">
+          <div className="flex flex-col items-center justify-center text-center lg:items-start lg:text-left lg:w-1/2">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -89,7 +89,7 @@ export default function Home() {
                 en Réalité Digitale
               </h1>
               <p className="mb-8 text-lg text-muted-foreground sm:text-xl">
-                Situé a la Rochelle, mon agence crée des solutions digitales innovantes 
+                Situé a la Rochelle, je crée des solutions digitales innovantes 
                 qui propulsent votre entreprise vers le succès.
               </p>
               <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
@@ -101,13 +101,31 @@ export default function Home() {
                 </Button>
                 <Button variant="outline" size="lg" asChild className="text-lg">
                   <Link href="/portfolio">
-                    Voir nos Réalisations
+                    Voir mes Réalisations
                   </Link>
                 </Button>
               </div>
             </motion.div>
           </div>
-        </div>
+                      <motion.div 
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.2 }}
+                        className="hidden lg:flex lg:w-1/2 items-center justify-center"
+                      >
+                        <div className="relative h-[250px] w-[200px] before:absolute before:inset-0 before:-translate-x-4 before:-translate-y-4 before:rounded-2xl before:border-2 before:border-primary/20">
+                          <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-primary/5 to-transparent rounded-2xl">
+                            <Image
+                              src="/assets/photo.webp"
+                              alt="Virginie chaffard"
+                              fill
+                              className="object-cover rounded-2xl shadow-lg"
+                              priority
+                            />
+                          </div>
+                        </div>
+                      </motion.div>
+                    </div>
       </section>
       {/* Section Image La Rochelle */}
 <section className="py-12">
@@ -117,10 +135,10 @@ export default function Home() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="relative h-[400px] w-full overflow-hidden rounded-xl"
+      className="relative h-[300px] max-w-[600px] mx-auto overflow-hidden rounded-xl"
     >
       <Image
-        src="/assets/la_rochelle.jpg"
+        src="/assets/la_rochelle.webp"
         alt="La Rochelle"
         fill
         className="object-cover"
@@ -272,7 +290,7 @@ export default function Home() {
       >
         <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-primary text-2xl font-bold text-primary-foreground">2</div>
         <h3 className="mb-2 text-xl font-semibold">Proposition</h3>
-        <p className="text-muted-foreground">Élaboration d'une solution personnalisée et chiffrage détaillé</p>
+        <p className="text-muted-foreground">Élaboration d une solution personnalisée et chiffrage détaillé</p>
       </motion.div>
 
       <motion.div
@@ -340,7 +358,7 @@ export default function Home() {
       >
         <h3 className="mb-4 text-xl font-semibold">Approche Personnalisée</h3>
         <p className="text-muted-foreground">
-          Chaque projet est unique et mérite une attention particulière. Je m'adapte à vos besoins spécifiques.
+          Chaque projet est unique et mérite une attention particulière. Je m adapte à vos besoins spécifiques.
         </p>
       </motion.div>
 
@@ -565,7 +583,3 @@ export default function Home() {
     </div>
   );
 }
-
-
-
-
