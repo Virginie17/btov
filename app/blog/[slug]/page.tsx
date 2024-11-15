@@ -1,3 +1,7 @@
+
+"use client";
+
+
 import { blogPosts } from "@/lib/blog-data";
 import { notFound } from "next/navigation";
 import Image from "next/image";

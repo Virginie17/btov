@@ -25,7 +25,7 @@ export default function MentionsLegales() {
           </p>
           <p>
             Siège social : La Rochelle<br />
-            Email : contact@btov-dev.fr
+            Email : btovdeveloppement@gmail.com
           </p>
           <p>
             Directeur de la publication : Mme Chaffard <br />
