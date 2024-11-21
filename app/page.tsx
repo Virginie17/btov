@@ -114,7 +114,7 @@ export default function Home() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="w-full lg:w-1/2 flex justify-center"
       >
-        <div className="relative w-[50px] h-[100px] lg:w-[200px] lg:h-[250px]">
+        <div className="relative w-[60px] h-[80px] lg:w-[200px] lg:h-[250px]">
           <div className="absolute inset-0 before:absolute before:inset-0 before:-translate-x-4 before:-translate-y-4 before:rounded-2xl before:border-2 before:border-primary/20">
             <div className="relative h-full w-full bg-gradient-to-tr from-primary/10 via-primary/5 to-transparent rounded-2xl">
               <Image
@@ -141,7 +141,7 @@ export default function Home() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
-      className="relative h-[300px] max-w-[600px] mx-auto overflow-hidden rounded-xl"
+      className="relative h-[150px] md:h-[300px] max-w-[700px] mx-auto overflow-hidden rounded-xl"
     >
       <Image
         src="/assets/la_rochelle.webp"
@@ -149,11 +149,11 @@ export default function Home() {
         fill
         className="object-cover"
         priority
+        sizes="(max-width: 768px) 100vw, 700px"
       />
     </motion.div>
   </div>
 </section>
-
       
         {/* Section Services */}
         <section className="relative overflow-hidden bg-gradient-to-b from-background via-primary/5 to-background py-20">
