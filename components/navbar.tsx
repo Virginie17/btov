@@ -32,9 +32,7 @@ export default function Navbar() {
             <Link href="/portfolio" className="text-foreground/60 transition-colors hover:text-foreground">
               Portfolio
             </Link>
-            <Link href="/blog" className="text-foreground/60 transition-colors hover:text-foreground">
-              Blog
-            </Link>
+            
             <Link href="/contact" className="text-foreground/60 transition-colors hover:text-foreground">
               Contact
             </Link>
