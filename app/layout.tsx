@@ -5,10 +5,14 @@ import { ThemeProvider } from '@/components/theme-provider';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ['latin'],display: 'swap',preload: true,});
 
 export const metadata: Metadata = {
-  title: 'B to V Développement | Solutions Web Professionnelles',
+  title: {
+    default:'B to V Développement | Solutions Web Professionnelles',
+    template: '%s | B to V Développement',
+  },
+
   description: 'Expertise en développement web, création de sites et applications sur mesure pour votre entreprise',
 };
 
@@ -19,6 +23,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" suppressHydrationWarning>
+       <head>
+        <link 
+          rel="preload"
+          href="/fonts/inter.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"

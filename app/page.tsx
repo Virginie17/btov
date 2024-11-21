@@ -71,62 +71,68 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section avec Parallax */}
-      <section className="relative min-h-[90vh] overflow-hidden bg-gradient-to-b from-primary/10 via-background to-background">
-        <div className="absolute inset-0 bg-grid-white/10" />
-        <div className="container relative mx-auto flex min-h-[90vh] px-4">
-          <div className="flex flex-col items-center justify-center text-center lg:items-start lg:text-left lg:w-1/2">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="max-w-3xl"
-            >
-              <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
-                Transformons vos{" "}
-                <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
-                  Idées
-                </span>{" "}
-                en Réalité Digitale
-              </h1>
-              <p className="mb-8 text-lg text-muted-foreground sm:text-xl">
-                Situé a la Rochelle, je crée des solutions digitales innovantes 
-                qui propulsent votre entreprise vers le succès.
-              </p>
-              <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                <Button asChild size="lg" className="text-lg">
-                  <Link href="/contact">
-                    Démarrer votre Projet
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button variant="outline" size="lg" asChild className="text-lg">
-                  <Link href="/portfolio">
-                    Voir mes Réalisations
-                  </Link>
-                </Button>
-              </div>
-            </motion.div>
+<section className="relative min-h-[90vh] overflow-hidden bg-gradient-to-b from-primary/10 via-background to-background">
+  <div className="absolute inset-0 bg-grid-white/10" />
+  <div className="container relative mx-auto flex min-h-[90vh] px-4">
+    <div className="flex flex-col-reverse lg:flex-row items-center justify-center w-full gap-8">
+      <div className="w-full lg:w-1/2 flex flex-col items-center text-center lg:items-start lg:text-left">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-3xl"
+        >
+          <h1 className="mb-6 text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
+            Transformons vos{" "}
+            <span className="bg-gradient-to-r from-primary to-blue-600 bg-clip-text text-transparent">
+              Idées
+            </span>{" "}
+            en Réalité Digitale
+          </h1>
+          <p className="mb-8 text-lg text-muted-foreground sm:text-xl">
+            Situé a la Rochelle, je crée des solutions digitales innovantes qui propulsent votre entreprise vers le succès.
+          </p>
+          <div className="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+            <Button asChild size="lg" className="text-lg">
+              <Link href="/contact">
+                Démarrer votre Projet
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </Button>
+            <Button variant="outline" size="lg" asChild className="text-lg">
+              <Link href="/portfolio">
+                Voir mes Réalisations
+              </Link>
+            </Button>
           </div>
-                      <motion.div 
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: 0.2 }}
-                        className="hidden lg:flex lg:w-1/2 items-center justify-center"
-                      >
-                        <div className="relative h-[250px] w-[200px] before:absolute before:inset-0 before:-translate-x-4 before:-translate-y-4 before:rounded-2xl before:border-2 before:border-primary/20">
-                          <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-primary/5 to-transparent rounded-2xl">
-                            <Image
-                              src="/assets/photo.webp"
-                              alt="Virginie chaffard"
-                              fill
-                              className="object-cover rounded-2xl shadow-lg"
-                              priority
-                            />
-                          </div>
-                        </div>
-                      </motion.div>
-                    </div>
-      </section>
+        </motion.div>
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0, x: 20 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        className="w-full lg:w-1/2 flex justify-center"
+      >
+        <div className="relative w-[50px] h-[100px] lg:w-[200px] lg:h-[250px]">
+          <div className="absolute inset-0 before:absolute before:inset-0 before:-translate-x-4 before:-translate-y-4 before:rounded-2xl before:border-2 before:border-primary/20">
+            <div className="relative h-full w-full bg-gradient-to-tr from-primary/10 via-primary/5 to-transparent rounded-2xl">
+              <Image
+                src="/assets/photo.webp"
+                alt="Virginie chaffard"
+                fill
+                className="object-cover rounded-2xl shadow-lg"
+                priority
+                sizes="(max-width: 1024px) 150px, 200px"
+                quality={95}
+              />
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  </div>
+</section>
       {/* Section Image La Rochelle */}
 <section className="py-12">
   <div className="container mx-auto px-4">
@@ -549,6 +555,8 @@ export default function Home() {
     </div>
   </div>
 </section>
+
+
 
       {/* Section CTA */}
       <section className="relative overflow-hidden bg-primary py-20 text-primary-foreground">
