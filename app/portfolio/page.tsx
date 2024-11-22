@@ -56,7 +56,7 @@ const testimonials = [
   {
     name: "Sophie Martin",
     role: "CEO, TechStart",
-    content: "Un développeur exceptionnel qui a su transformer notre vision en réalité. Le site web qu'il a créé dépasse toutes nos attentes.",
+    content: "Une développeuse exceptionnelle qui a su transformer notre vision en réalité. Le site web qu'il a créé dépasse toutes nos attentes.",
     avatar: "https://randomuser.me/api/portraits/women/1.jpg",
     rating: 5
   },
@@ -94,12 +94,11 @@ export default function Portfolio() {
             viewport={{ once: true }}
           >
             <Card className="overflow-hidden h-full hover:shadow-lg transition-all duration-300">
-              <div className="relative h-48 sm:h-64 md:h-48 w-full group">
+              <div className="relative h-48 w-full group">
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

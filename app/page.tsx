@@ -70,6 +70,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
+      
       {/* Hero Section avec Parallax */}
 <section className="relative min-h-[90vh] overflow-hidden bg-gradient-to-b from-primary/10 via-background to-background">
   <div className="absolute inset-0 bg-grid-white/10" />
