@@ -5,16 +5,15 @@ import { ThemeProvider } from '@/components/theme-provider';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 
-const inter = Inter({ subsets: ['latin'],display: 'swap',preload: true,});
+const inter = Inter({ subsets: ['latin'],display: 'swap',preload: true,adjustFontFallback: true,});
 
 export const metadata: Metadata = {
-  title: {
-    default:'B to V Développement | Solutions Web Professionnelles',
-    template: '%s | B to V Développement',
-  },
-
-  description: 'Expertise en développement web, création de sites et applications sur mesure pour votre entreprise',
-};
+  title: 'BTOV Développement',
+  description: 'Solutions web innovantes',
+}
+const preloadStyles = `
+  @import url('critical-styles.css');
+`
 
 export default function RootLayout({
   children,
@@ -22,8 +21,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="fr" suppressHydrationWarning>
-       <head>
+    <html lang="fr" suppressHydrationWarning className={inter.className}>
+      <head>
+        <style dangerouslySetInnerHTML={{ __html: preloadStyles }} />
         <link 
           rel="preload"
           href="/fonts/inter.woff2"

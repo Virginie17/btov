@@ -571,7 +571,7 @@ export default function Home() {
             <h2 className="mb-4 text-3xl font-bold sm:text-4xl">
               Prêt à Transformer votre Vision en Réalité ?
             </h2>
-            <p className="mx-auto mb-8 max-w-2xl text-lg opacity-90">
+            <p className="mx-auto mb-8 max-w-2xl text-lg text-black dark:text-white">
               Contactez-moi dès aujourd hui pour discuter de votre projet et obtenir un devis personnalisé.
             </p>
             <Button

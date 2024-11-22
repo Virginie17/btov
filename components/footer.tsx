@@ -1,4 +1,4 @@
-import { Code2, Mail, MapPin, Phone } from "lucide-react";
+import { Code2, Mail, MapPin } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
@@ -53,19 +53,25 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="mb-4 font-semibold">Contact</h3>
-            <ul className="space-y-2 text-sm">
-              <li className="flex items-center space-x-2 text-muted-foreground">
-                <MapPin className="h-4 w-4" />
-                <span>La Rochelle</span>
-              </li>
-              
-              <li className="flex items-center space-x-2 text-muted-foreground">
-                <Mail className="h-4 w-4" />
-                <span>btovdeveloppement@gmail.com</span>
-              </li>
-            </ul>
-          </div>
+  <h3 className="mb-4 font-semibold">Contact</h3>
+  <div className="space-y-2 text-sm">
+    <div className="flex items-center space-x-3">
+      <MapPin className="h-5 w-5 text-muted-foreground" />
+      <span className="text-muted-foreground">La Rochelle, France</span>
+    </div>
+    <div className="flex items-center space-x-3">
+      <Mail className="h-5 w-5 text-muted-foreground" />
+      <Link 
+        href="/contact" 
+        className="text-muted-foreground hover:text-primary transition-colors"
+      >
+        btovdeveloppement@gmail.com
+      </Link>
+    </div>
+  </div>
+</div>
+
+
         </div>
 
         <div className="mt-8 flex flex-col items-center justify-between border-t pt-8 text-sm text-muted-foreground md:flex-row">
