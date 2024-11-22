@@ -114,7 +114,7 @@ export default function Home() {
         transition={{ duration: 0.5, delay: 0.2 }}
         className="w-full lg:w-1/2 flex justify-center"
       >
-        <div className="relative w-[60px] h-[80px] lg:w-[200px] lg:h-[250px]">
+        <div className="relative w-[60px] h-[80px] lg:w-[100px] lg:h-[150px]">
           <div className="absolute inset-0 before:absolute before:inset-0 before:-translate-x-4 before:-translate-y-4 before:rounded-2xl before:border-2 before:border-primary/20">
             <div className="relative h-full w-full bg-gradient-to-tr from-primary/10 via-primary/5 to-transparent rounded-2xl">
               <Image
